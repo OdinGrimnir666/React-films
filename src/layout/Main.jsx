@@ -15,6 +15,10 @@ const Main = () => {
       .then((data) => {
         setMovies(data.Search);
         setLoading(false);
+      })
+      .catch((err) =>{
+        console.err(err);
+        setLoading(true)
       });
   }, []);
 
@@ -30,6 +34,10 @@ const Main = () => {
         .then((data) => {
           setMovies(data.Search);
           setLoading(false);
+        })
+        .catch((err) =>{
+          console.err(err);
+          setLoading(true)
         });
     }
   };
